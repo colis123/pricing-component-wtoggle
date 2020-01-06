@@ -29,15 +29,68 @@ body {
   color: #494c5f;
 }
 
+.med-text {
+  color: #6d708d;
+}
+
 .card {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  row-gap: 1.5rem;
+  row-gap: 2.2rem;
   border-radius: 20px;
   background-color: white;
   padding: 1.75rem;
+  min-width: 280px;
+}
+
+.card button {
+  margin-top: 1rem;
+  padding: .75rem 1rem;
+  border-radius: 5px;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.card .info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 2rem;
+}
+
+.card .info p {
+  position: relative;
+}
+
+.card .info p:last-child {
+  position: relative;
+}
+
+.card .info p:last-child::after {
+  position: absolute;
+  content: '';
+  top: 35px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #b3b5c6;
+}
+
+.card .info p::before {
+  position: absolute;
+  content: '';
+  top: -18px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #b3b5c6;
 }
 
 .container {

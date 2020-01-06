@@ -32,14 +32,77 @@ body {
   color: $dark-gray-blue;
 }
 
+.med-text {
+  color: $gray-blue;
+}
+
+
+// Card styling
 .card {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 1.5rem;
+  row-gap: 2.2rem;
   border-radius: 20px;
   background-color: white;
   padding: 1.75rem;
+  min-width: 280px;
+
+
+
+  //Card Button
+  button {
+    margin-top: 1rem;
+    padding: .75rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to right, ($gradient-start, $gradient-stop));
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+
+    p {
+      position: relative;
+
+
+      // Creates last divider of the info spacers
+      &:last-child {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+          top: 35px;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background: $light-gray-blue;
+        }
+
+      }
+
+      // Create card info spacers
+      &::before {
+        position: absolute;
+        content: '';
+        top: -18px;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: $light-gray-blue;
+      }
+
+    }
+
+
+  }
 }
+
 
 
 

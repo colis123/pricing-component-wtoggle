@@ -11,6 +11,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: 700;
+  background-color: $very-light-gray-blue;
+  background-image: url('../images/bg-top.svg');
+  background-position: top 0px left 170%;
+  background-repeat: no-repeat;
+  background-size: 16em 26em;
 }
 
 //Utilites
@@ -22,7 +27,19 @@ body {
   color: $light-gray-blue;
 }
 
-.card {}
+.price-text {
+  font-size: 3rem;
+  color: $dark-gray-blue;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+  border-radius: 20px;
+  background-color: white;
+  padding: 1.75rem;
+}
 
 
 
@@ -69,4 +86,10 @@ body {
       cursor: pointer;
     }
   }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
 }

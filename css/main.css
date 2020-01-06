@@ -7,10 +7,16 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .text-center {
   text-align: center;
+}
+
+.light-text {
+  color: #b3b5c6;
 }
 
 .container {
@@ -19,7 +25,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  row-gap: 2rem;
+  row-gap: 3rem;
+  justify-items: center;
 }
 
 .container h1 {
@@ -27,11 +34,36 @@ body {
 }
 
 .toggler {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toggler button {
+  position: relative;
+  height: 2rem;
+  width: 3.5rem;
+  border: none;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+}
+
+.toggler button::before {
+  position: absolute;
+  content: '';
+  top: 4px;
+  left: 28px;
+  height: 24px;
+  width: 24px;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

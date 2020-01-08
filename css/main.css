@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 700;
   background-color: #f6f6fe;
@@ -33,6 +33,10 @@ body {
   color: #6d708d;
 }
 
+.white-text {
+  color: white;
+}
+
 .card {
   display: -ms-grid;
   display: grid;
@@ -47,14 +51,14 @@ body {
 
 .card button {
   margin-top: 1rem;
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   border-radius: 5px;
   border: none;
   background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
   background: linear-gradient(to right, #a3a8f0, #696fdd);
   color: white;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .card .info {
@@ -75,7 +79,7 @@ body {
 
 .card .info p:last-child::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 35px;
   left: 0;
   height: 1px;
@@ -85,12 +89,22 @@ body {
 
 .card .info p::before {
   position: absolute;
-  content: '';
+  content: "";
   top: -18px;
   left: 0;
   height: 1px;
   width: 100%;
   background: #b3b5c6;
+}
+
+.card2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to bottom, #a3a8f0, #696fdd);
+}
+
+.card2 button {
+  background: white;
+  color: #696fdd;
 }
 
 .container {
@@ -131,7 +145,7 @@ body {
 
 .toggler button::before {
   position: absolute;
-  content: '';
+  content: "";
   top: 4px;
   left: 28px;
   height: 24px;
@@ -147,5 +161,39 @@ body {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   row-gap: 2rem;
+}
+
+@media (min-width: 980px) {
+  .cards {
+    margin-top: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .cards .card2 {
+    position: relative;
+  }
+  .cards .card2::before {
+    position: absolute;
+    content: '';
+    top: -15px;
+    left: 0;
+    height: 2rem;
+    width: 100%;
+    background: #a3a8f0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .cards .card2::after {
+    position: absolute;
+    content: '';
+    bottom: -15px;
+    left: 0;
+    height: 2rem;
+    width: 100%;
+    background: #696fdd;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

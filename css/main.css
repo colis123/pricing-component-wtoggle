@@ -11,9 +11,9 @@ body {
   font-weight: 700;
   background-color: #f6f6fe;
   background-image: url("../images/bg-top.svg");
-  background-position: top 0px left 170%;
+  background-position: right -10rem top -1rem;
   background-repeat: no-repeat;
-  background-size: 16em 26em;
+  background-size: 20rem 35rem;
 }
 
 .text-center {
@@ -143,16 +143,17 @@ body {
   background: linear-gradient(to right, #a3a8f0, #696fdd);
 }
 
-.toggler button::before {
+.toggler button span {
   position: absolute;
-  content: "";
+  background: red;
   top: 4px;
-  left: 28px;
-  height: 24px;
-  width: 24px;
+  right: 3px;
+  height: 25px;
+  width: 25px;
   background: white;
   border-radius: 20px;
-  cursor: pointer;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .cards {
@@ -164,6 +165,11 @@ body {
 }
 
 @media (min-width: 980px) {
+  body {
+    background-image: url("../images/bg-bottom.svg"), url("../images/bg-top.svg");
+    background-position: bottom left, top right;
+    background-size: 30% 40%, 30% 70%;
+  }
   .cards {
     margin-top: 2rem;
     display: -webkit-box;
@@ -195,5 +201,22 @@ body {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+}
+
+.attribution {
+  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=main.css.map */
